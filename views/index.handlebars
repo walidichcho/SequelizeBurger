@@ -1,0 +1,58 @@
+<header>
+    <img src="burger1.jpg" class="burger-pic" alt="Burgers">
+
+    <h1>Eat-Da-Burger!</h1>
+
+    <main>
+
+        {{!-- Create a div where is_devoured is false --}}
+        <div class="row">
+            <div class="col-xs-6 col-md-4"><br>
+                {{#each burgers}}
+                {{#unless this.devoured}}
+                <div class="devour-it"><br>
+                    {{this.id}}. {{this.burger_name}}
+                </div>
+                <div class="devour-btn-form"><br>
+                    <form action="/{{this.id}}?_method=PUT" method="POST">
+                        <button type="submit" class="devour-it-btn">Devour It!</button>
+                    </form>
+                </div>
+                {{/unless}}
+                {{/each}}
+            </div>
+
+            {{!-- Form will send a post command to the server --}}
+            {{!-- Create a new burger and save it in the database --}}
+            <div class="col-xs-6 col-md-4"><br>
+                <form method="POST" action="/" class="add-a-burger"><br>
+                    <p>Enter a burger you want to eat and click the submit button.</p>
+                    <input type="text" name="burger"><br>
+                    <button type="submit">Submit</button>
+
+
+                </form>
+            </div>
+
+            {{!-- Create a div where is_devoured is true --}}
+            <div class="col-xs-6 col-md-4">
+                {{#each burgers}}
+                {{#if this.devoured}}
+                <div class="devoured">
+                    {{this.id}}. {{this.burger_name}}
+                    <form action="/{{this.id}}?_method=PUT" method="POST">
+                        <input type="hidden" name="devoured" value="true">
+                    </form>
+                </div>
+                <div class="devoured-form">
+                    <form action="/{{this.id}}?_method=DELETE" method="POST">
+                        <button class="btn btn-danger devoured-btn" type="submit">X</button>
+                    </form>
+                </div>
+                {{/if}}
+                {{/each}}
+            </div>
+        </div><!-- end row -->
+
+    </main>
+</header>
