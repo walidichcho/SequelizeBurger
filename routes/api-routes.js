@@ -12,12 +12,12 @@ var db = require("../models");
 // =============================================================
 module.exports = function (app) {
 
-    // GET route for getting all of the todos
+    // GET route for getting all of the burger
     app.get("/", function (req, res) {
         // findAll returns all entries for a table when used with no options
-        db.Burger.findAll({}).then(function (dbBurger) {
-            // We have access to the todos as an argument inside of the callback function
-            res.render('index', { burgers: dbBurger }); // pass object to handlebars
+        db.Burger.findAll({}).then(function (dbSBurger) {
+            // We have access to the burger as an argument inside of the callback function
+            res.render('index', { burgers: dbSBurger }); // pass object to handlebars
 
         });
     });
@@ -62,27 +62,11 @@ module.exports = function (app) {
             }
         }).then(function () {
             res.redirect('/');
-            //   res.json(dbBurger);
+            //   res.json(dbSBurger);
         });
 
     });
 
 };
 
-//   // PUT route for updating todos. We can get the updated todo data from req.body
-//   app.put("/api/todos", function(req, res) {
-// //     // Update takes in an object describing the properties we want to update, and
-// //     // we use where to describe which objects we want to update
-//     db.Todo.update({
-//       text: req.body.text,
-//       complete: req.body.complete
-//     }, {
-//       where: {
-//         id: req.body.id
-//       }
-//     }).then(function(dbTodo) {
-//       res.json(dbTodo);
-//     });
-//   });
 
-// 

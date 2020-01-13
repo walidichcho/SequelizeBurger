@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "Walid123@",
-    "database": "dbBurger",
+    "database": "dbSBurger",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
