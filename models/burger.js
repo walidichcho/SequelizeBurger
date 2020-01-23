@@ -1,22 +1,12 @@
-//====================================================
-// Create a Burger database model
-// Build columns `burger_name`, `devoured`, and `date`
-//====================================================
-
-// Sequelize (capital) references the standard library.
-var Sequelize = require("sequelize");
-// sequelize (lowercase) references the connection to the DB.
-var sequelize = require("../config/connection");
-
-module.exports = function (sequelize) {
+module.exports = function (sequelize, types) {
 
     var Burger = sequelize.define('Burger', {
         burger_name: {
-            type: Sequelize.STRING,
+            type: types.STRING,
             allowNull: false // This DB column may not be equal to null.
         },
         devoured: {
-            type: Sequelize.BOOLEAN,
+            type: types.BOOLEAN,
             allowNull: false,
             defaultValue: false
         }
