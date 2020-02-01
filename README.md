@@ -5,11 +5,21 @@ This app is all about eating burgers, You'll create a burger logger with MySQL, 
 
 Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
 
+![](images/start.png)
+
+
 * Whenever a user submits a burger's name, the app will display the burger on the left side of the page -- waiting to be devoured.
+
+![](images/addburger.png)
+
 
 * Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page.
 
+![](images/devour.png)
+
 * The app will store every burger in a database, whether devoured or not.
+
+![](images/delete.png)
 
 
 Prerequisites
