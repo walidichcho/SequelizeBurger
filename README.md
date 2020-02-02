@@ -3,6 +3,13 @@
 Eat-Da-Burger Sequelized
 This app is all about eating burgers, You'll create a burger logger with MySQL, Node, Express, and Sequelize as the ORM (yum!). This follows MVC design pattern and uses Node and MySQL to query and route data into the app, and Handlebars to generate the HTML.
 
+
+![](public/img/home.png)
+
+
+
+
+
 Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
 
 ![](public/img/start.png)
