@@ -52,3 +52,7 @@ dotenv
 Sequelize
 
 Sequelize-CLI
+
+
+Deployed website: https://mysterious-river-70269.herokuapp.com/
+
